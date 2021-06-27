@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import './App.css'
+import './App.scss'
 import Chat from './components/Chat'
 import JoinBlock from './components/JoinBlock'
 import reducer from './reducer'
@@ -46,7 +46,9 @@ function App() {
 
 	// console.log(state)
 	window.socket = socket
-
+	
+	
+	state.joined = true
 	return (
 		<div className='wrapper'>
 			{!state.joined ? (
