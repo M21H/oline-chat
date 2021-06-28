@@ -1,23 +1,21 @@
 import React from 'react'
 import Avatar from '@material-ui/core/Avatar'
 
-export const MessageLeft = props => {
-	const message = props.message ? props.message : 'no message'
-	const timestamp = props.timestamp ? props.timestamp : ''
-	const photoURL = props.photoURL ? props.photoURL : 'dummy.js'
-	const displayName = props.displayName ? props.displayName : 'user'
+export const MessageLeft = ({ message: { text, userName } }) => {
+	const timestamp = '10:23'
+	const displayName = userName ? userName : 'user'
 
 	return (
 		<>
 			<div className='messageRow'>
-				<Avatar alt={displayName} className='orange' src={photoURL}></Avatar>
+				<Avatar alt={displayName} className='orange'></Avatar>
 				<div>
 					<div className='displayName'>{displayName}</div>
 					<div className='messageBlue'>
 						<div>
-							<p className='messageContent'>{message}</p>
+							<p className='messageContent'>{text}</p>
+							<div className='messageTimeStampRight'>{timestamp}</div>
 						</div>
-						<div className='messageTimeStampRight'>{timestamp}</div>
 					</div>
 				</div>
 			</div>
@@ -25,9 +23,8 @@ export const MessageLeft = props => {
 	)
 }
 
-export const MessageRight = ({ message, ...props }) => {
-	const text = message.text ? message.text : 'no message'
-	const timestamp = props.timestamp ? props.timestamp : ''
+export const MessageRight = ({ message: { text, userName } }) => {
+	const timestamp = '10:23'
 	return (
 		<div className='messageRowRight'>
 			<div className='messageOrange'>

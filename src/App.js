@@ -46,9 +46,7 @@ function App() {
 
 	// console.log(state)
 	window.socket = socket
-	
-	
-	state.joined = true
+
 	return (
 		<div className='wrapper'>
 			{!state.joined ? (
