@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import './App.css'
+import './App.scss'
 import Chat from './components/Chat'
 import JoinBlock from './components/JoinBlock'
 import reducer from './reducer'
